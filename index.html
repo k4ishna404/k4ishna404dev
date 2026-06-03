@@ -3,35 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishna - Developer Portfolio</title>
+    <title>Krishna - Full Stack Developer | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">@k4ishna404</div>
-            <ul class="nav-links">
+            <div class="logo">
+                <i class="fas fa-code"></i> K4ishna
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="stars"></div>
         <div class="container">
             <div class="hero-content">
-                <img src="https://avatars.githubusercontent.com/u/290025927?v=4" alt="Krishna" class="profile-img">
-                <h1>Krishna</h1>
-                <p class="subtitle">Full Stack Developer | Open Source Enthusiast</p>
-                <p class="description">Building amazing things with code. Check out my projects and let's collaborate!</p>
+                <div class="profile-container">
+                    <img src="https://avatars.githubusercontent.com/u/290025927?v=4" alt="Krishna" class="profile-img">
+                    <div class="online-status"></div>
+                </div>
+                <h1 class="glitch" data-text="Krishna">Krishna</h1>
+                <p class="subtitle">Full Stack Developer | Open Source Contributor | Tech Enthusiast</p>
+                <p class="description">Crafting digital experiences with code. Passionate about building scalable applications and contributing to open source.</p>
+                <div class="social-links">
+                    <a href="https://github.com/k4ishna404" target="_blank" class="social-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="mailto:k4ishna404xpro@gmail.com" class="social-btn">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
                 <div class="cta-buttons">
-                    <a href="https://github.com/k4ishna404" class="btn btn-primary">View GitHub</a>
-                    <a href="#projects" class="btn btn-secondary">See My Work</a>
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="50">0</div>
+                    <p class="stat-label">Projects Completed</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="100">0</div>
+                    <p class="stat-label">Happy Clients</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="5">0</div>
+                    <p class="stat-label">Years Experience</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="30">0</div>
+                    <p class="stat-label">Technologies</p>
                 </div>
             </div>
         </div>
@@ -40,11 +87,71 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="header-line"></div>
+            </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hello! I'm Krishna, a passionate developer with a keen interest in building web applications and exploring new technologies. I love solving complex problems and contributing to open source projects.</p>
-                    <p>When I'm not coding, you can find me exploring new frameworks, reading tech articles, or collaborating with other developers in the community.</p>
+                    <p>Hi! I'm Krishna, a passionate full-stack developer based in India. I specialize in building web applications that are not only functional but also beautiful and user-friendly.</p>
+                    <p>With a strong foundation in both frontend and backend technologies, I love turning complex problems into simple, elegant solutions. I'm committed to writing clean, maintainable code and staying updated with the latest industry trends.</p>
+                    <p>When I'm not coding, you'll find me contributing to open-source projects, reading tech blogs, or exploring new frameworks and technologies.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Creating responsive and dynamic web applications</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-database"></i>
+                        <h3>Backend Development</h3>
+                        <p>Building robust APIs and database solutions</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Performance</h3>
+                        <p>Optimizing applications for speed and efficiency</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Senior Developer</h3>
+                        <p class="company">Tech Company</p>
+                        <p class="date">2023 - Present</p>
+                        <p class="description">Leading development of scalable web applications, mentoring junior developers, and architecting microservices solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Full Stack Developer</h3>
+                        <p class="company">Digital Agency</p>
+                        <p class="date">2021 - 2023</p>
+                        <p class="description">Developed and maintained multiple client projects using modern web technologies and best practices.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Junior Developer</h3>
+                        <p class="company">Startup</p>
+                        <p class="date">2020 - 2021</p>
+                        <p class="description">Started my development journey, learning full stack development and contributing to various projects.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -53,9 +160,18 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Featured Projects</h2>
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="tools">Tools</button>
+            </div>
             <div class="projects-grid" id="projects-grid">
-                <!-- Projects will be loaded here dynamically -->
+                <!-- Projects will be loaded dynamically -->
             </div>
         </div>
     </section>
@@ -63,34 +179,85 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2>Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
+            <div class="section-header">
+                <h2>Skills & Technologies</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
                     <h3>Frontend</h3>
-                    <ul>
-                        <li>HTML & CSS</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                        <li>Responsive Design</li>
-                    </ul>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
                 </div>
-                <div class="skill-card">
+                <div class="skill-category">
                     <h3>Backend</h3>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>JavaScript</li>
-                        <li>RESTful APIs</li>
-                        <li>Database Design</li>
-                    </ul>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">Authentication</span>
+                    </div>
                 </div>
-                <div class="skill-card">
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
                     <h3>Tools & Platforms</h3>
-                    <ul>
-                        <li>Git & GitHub</li>
-                        <li>VS Code</li>
-                        <li>Command Line</li>
-                        <li>NPM/Yarn</li>
-                    </ul>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Webpack</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2>Achievements & Awards</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Open Source Contributor</h3>
+                    <p>Active contributor to multiple open-source projects with 500+ stars</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Top Developer</h3>
+                    <p>Recognized as top developer on GitHub with consistent contributions</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Best Project Award</h3>
+                    <p>Won awards for innovative projects and excellent code quality</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certifications</h3>
+                    <p>Completed multiple professional certifications in web development</p>
                 </div>
             </div>
         </div>
@@ -99,13 +266,28 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="header-line"></div>
+            </div>
             <div class="contact-content">
-                <p>I'm always open to new opportunities and collaborations. Reach out to me on:</p>
-                <div class="contact-links">
-                    <a href="https://github.com/k4ishna404" class="contact-link">
-                        <span>GitHub</span>
-                    </a>
+                <p>Have a project in mind? Let's collaborate and create something amazing!</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <a href="mailto:k4ishna404xpro@gmail.com">k4ishna404xpro@gmail.com</a>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-github"></i>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/k4ishna404" target="_blank">github.com/k4ishna404</a>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>India</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -114,7 +296,13 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Krishna. All rights reserved.</p>
+            <div class="footer-content">
+                <p>&copy; 2026 Krishna. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/k4ishna404" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:k4ishna404xpro@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
